@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Subscription</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-screen overflow-x-hidden text-zinc-800 duration-300 bg-white relative">
+
+  <header class="w-full px-4 sm:px-6 lg:px-8 py-4 lg:py-5 lg:w-[75vw] lg:mx-auto">
+    <nav>
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="z-50"> <!-- z-index élevé pour le mobile menu -->
+          <a href="#">
+            <img src="./src/assets/Logo-2MJ.jpg"
+              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-gray-200 shadow-sm" alt="logo">
+          </a>
+        </div>
+
+        <!-- Menu Desktop (hidden on mobile) -->
+        <div class="hidden lg:block">
+          <ul class="flex items-center gap-4 xl:gap-8">
+            <li class="text-sm xl:text-md hover:bg-blue-50 px-3 py-2 rounded-full transition-all duration-300">
+              <a href="#" class="whitespace-nowrap">Home</a>
+            </li>
+            <li class="text-sm xl:text-md hover:bg-blue-50 px-3 py-2 rounded-full transition-all duration-300">
+              <a href="#" class="whitespace-nowrap">About</a>
+            </li>
+            <li class="text-sm xl:text-md hover:bg-blue-50 px-3 py-2 rounded-full transition-all duration-300">
+              <a href="#" class="whitespace-nowrap">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bouton Docs (toujours visible) -->
+        <div class="z-50"> <!-- Même z-index que le logo -->
+          <a href="#"
+            class="bg-blue-700 hover:bg-blue-600 transition-all duration-300 text-white text-sm sm:text-md py-1.5 px-4 sm:py-2 sm:px-6 rounded-full whitespace-nowrap">
+            Docs
+          </a>
+        </div>
+
+        <!-- Menu Mobile (Bouton Burger - visible uniquement en mobile) -->
+        <div class="lg:hidden z-50">
+          <button id="mobile-menu-button" class="p-2 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Mobile (Contenu) -->
+      <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-40 pt-20 px-6">
+        <ul class="flex flex-col gap-6">
+          <li class="border-b border-gray-100 py-4">
+            <a href="#" class="text-lg w-full block">Home</a>
+          </li>
+          <li class="border-b border-gray-100 py-4">
+            <a href="#" class="text-lg w-full block">About</a>
+          </li>
+          <li class="border-b border-gray-100 py-4">
+            <a href="#" class="text-lg w-full block">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="lg:w-[75vw] lg:mx-auto">
+    <div class="flex justify-center items-center h-screen">
+      <div class="flex flex-col gap-2 justify-center items-center">
+        <div
+          class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:bg-zinc-100 hover:ring-gray-900/20 transition-all duration-300">
+          <a href="#"
+            class="font-semibold text-blue-600 transition-all duration-300 hover:text-blue-700 flex justify-center items-center gap-1.5"><span
+              class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+            </span></a>
+        </div>
+        <div class="">
+          <span><a href="#"></a></span>
+        </div>
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold normal-case flex flex-col justify-center items-center leading-tight">
+          <span class="text-center">Your presence,</span>
+          <span class="text-center">perfectly presented</span>
+        </h1>
+
+        <p
+          class="normal-case mt-4 text-zinc-500 text-sm sm:text-base md:text-lg px-4 sm:px-0 w-full md:w-[80%] lg:w-[60%] xl:w-[40vw] text-center mx-auto lg:text-balance">
+          Découvrez comment sublimer votre image digitale avec des solutions sur mesure, conçues pour mettre en valeur
+          votre
+          marque et captiver votre audience.
+        </p>
+
+        <div class="w-full px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 mt-8">
+          <form action="https://api.smadmail.com/api/v1/email/save" method="POST">
+            <div class="flex items-center w-full max-w-md mx-auto">
+              <input type="email" id="email" name="email" required
+                class="w-full h-10 sm:h-12 px-4 text-base sm:text-lg text-gray-700 border border-r-0 rounded-r-none border-blue-500 focus:outline-none rounded-l-full shadow-sm"
+                placeholder="myemail@gmail.com" />
+              <button id="submitButton" type="submit"
+                class="h-10 sm:h-12 px-4 sm:px-6 text-sm bg-blue-700 border border-l-0 border-blue-500 rounded-r-full shadow-sm text-blue-50 hover:text-white hover:bg-blue-600 transition-all duration-300 hover:border-blue-400 focus:outline-none flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-5 sm:size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
