@@ -20,112 +20,79 @@
               class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-gray-200 shadow-sm" alt="logo">
           </a>
         </div>
-
-        <!-- Menu Desktop (hidden on mobile) -->
-        <div class="hidden lg:block">
-          <ul class="flex items-center gap-4 xl:gap-8">
-            <li class="text-sm xl:text-md hover:bg-blue-50 px-3 py-2 rounded-full transition-all duration-300">
-              <a href="#" class="whitespace-nowrap">Home</a>
+        <div class="">
+          <ul class="hidden lg:flex space-x-6">
+            <li>
+              <a href="#" class="text-sm font-semibold text-gray-600 hover:text-gray-800">API</a>
             </li>
-            <li class="text-sm xl:text-md hover:bg-blue-50 px-3 py-2 rounded-full transition-all duration-300">
-              <a href="#" class="whitespace-nowrap">About</a>
+            <li>
+              <a href="#" class="text-sm font-semibold text-gray-600 hover:text-gray-800">Help</a>
             </li>
-            <li class="text-sm xl:text-md hover:bg-blue-50 px-3 py-2 rounded-full transition-all duration-300">
-              <a href="#" class="whitespace-nowrap">Contact</a>
+            <li>
+              <a href="#" class="text-sm font-semibold text-gray-600 hover:text-gray-800">Login in</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm font-semibold text-black hover:text-blue-500 border border-gray-200 px-5 py-3 rounded-lg duration-300">Sign up</a>
             </li>
           </ul>
         </div>
-
-        <!-- Bouton Docs (toujours visible) -->
-        <div class="z-50"> <!-- Même z-index que le logo -->
-          <a href="#"
-            class="bg-blue-700 hover:bg-blue-600 transition-all duration-300 text-white text-sm sm:text-md py-1.5 px-4 sm:py-2 sm:px-6 rounded-full whitespace-nowrap">
-            Docs
-          </a>
-        </div>
-
-        <!-- Menu Mobile (Bouton Burger - visible uniquement en mobile) -->
-        <div class="lg:hidden z-50">
-          <button id="mobile-menu-button" class="p-2 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Menu Mobile (Contenu) -->
-      <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-40 pt-20 px-6">
-        <ul class="flex flex-col gap-6">
-          <li class="border-b border-gray-100 py-4">
-            <a href="#" class="text-lg w-full block">Home</a>
-          </li>
-          <li class="border-b border-gray-100 py-4">
-            <a href="#" class="text-lg w-full block">About</a>
-          </li>
-          <li class="border-b border-gray-100 py-4">
-            <a href="#" class="text-lg w-full block">Contact</a>
-          </li>
-        </ul>
-      </div>
     </nav>
   </header>
 
-  <section class="lg:w-[75vw] lg:mx-auto">
-    <div class="flex justify-center items-center h-screen">
-      <div class="flex flex-col gap-2 justify-center items-center">
-        <div
-          class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:bg-zinc-100 hover:ring-gray-900/20 transition-all duration-300">
-          <a href="#"
-            class="font-semibold text-blue-600 transition-all duration-300 hover:text-blue-700 flex justify-center items-center gap-1.5"><span
-              class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true"><svg
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-              </svg>
-            </span></a>
-        </div>
-        <div class="">
-          <span><a href="#"></a></span>
-        </div>
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold normal-case flex flex-col justify-center items-center leading-tight">
-          <span class="text-center">Your presence,</span>
-          <span class="text-center">perfectly presented</span>
-        </h1>
-
-        <p
-          class="normal-case mt-4 text-zinc-500 text-sm sm:text-base md:text-lg px-4 sm:px-0 w-full md:w-[80%] lg:w-[60%] xl:w-[40vw] text-center mx-auto lg:text-balance">
-          Découvrez comment sublimer votre image digitale avec des solutions sur mesure, conçues pour mettre en valeur
-          votre
-          marque et captiver votre audience.
-        </p>
-
-        <div class="w-full px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 mt-8">
-          <form action="https://api.smadmail.com/api/v1/email/save" method="POST">
-            <div class="flex flex-col sm:flex-col gap-4">
-              <input type="text" name="name" id="name"
-                class="w-full h-10 sm:h-12 px-4 text-base sm:text-lg text-gray-700 border border-blue-500 rounded-full focus:outline-none shadow-sm"
-                placeholder="Your name" required />
-              <div class="flex items-center w-full max-w-md mx-auto">
-                <input type="email" id="email" name="email" required
-                  class="w-full h-10 sm:h-12 px-4 text-base sm:text-lg text-gray-700 border border-r-0 rounded-r-none border-blue-500 focus:outline-none rounded-l-full shadow-sm"
-                  placeholder="myemail@gmail.com" />
-                <button id="submitButton" type="submit"
-                  class="h-10 sm:h-12 px-4 sm:px-6 text-sm bg-blue-700 border border-l-0 border-blue-500 rounded-r-full shadow-sm text-blue-50 hover:text-white hover:bg-blue-600 transition-all duration-300 hover:border-blue-400 focus:outline-none flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-5 sm:size-6">
+  <!-- == contenu de la page == -->
+  <main class="relative z-20">
+    <section class="h-max lg:w-[85vw] mx-auto p-5 lg:p-0 grid gap-5 items-center relative top-3 lg:top-28 mb-12 lg:mb-52">
+      <div class="grid lg:grid-cols-2 justify-center items-center gap-6 lg:gap-8 lg:w-[75vw] lg:mx-auto">
+        <div class="flex flex-col justify-center items-center gap-13">
+          <div class="text-4xl lg:text-5xl">
+            <h1>A high-quality solution for those who want a beautiful startup website quickly</h1>
+          </div>
+          <div class="">
+            <form action="" method="post" class="flex flex-col gap-5">
+              <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400">
                     <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                   </svg>
-                </button>
+
+                </div>
+                <input type="text" id="name"
+                  class="bg-gray-50 border border-gray-100 text-black text-sm rounded-full block w-full ps-10 p-2.5 "
+                  placeholder="Your name">
               </div>
-            </div>
-          </form>
+              <div class="relative mb-4">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 20 16">
+                    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                    <path
+                      d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                  </svg>
+                </div>
+                <input type="email" id="email"
+                  class="bg-gray-50 border border-gray-100 text-black text-sm rounded-full block w-full ps-10 p-2.5 "
+                  placeholder="name@gmail.com">
+              </div>
+              <button type="submit" class="bg-blue-700 text-white py-2 rounded-full">Send</button>
+              <span class="text-gray-400 mb-10">By signing up, you agree to the Terms of Service</span>
+            </form>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-5">
+          <div class="mb-4">
+            <img src="./src/assets/Img_1.jpg" alt="newsletter illustration"
+              class="w-96 h-60 flex justify-center items-center border border-gray-200 rounded-lg shadow-lg">
+          </div>
+          <div class="text-center">
+            <p class="text-gray-400">We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you
+              need in your collection!</p>
+          </div>
         </div>
       </div>
-  </section>
+    </section>
+  </main>
 
   <script type="module" src="/src/main.js"></script>
 </body>
